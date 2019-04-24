@@ -1,0 +1,14 @@
+production:
+  facebook:
+    applications:
+      - something1:token1
+
+test:
+  facebook:
+    applications:
+      - something1:token1
+
+development:
+  facebook:
+    applications:
+      - something1:token1

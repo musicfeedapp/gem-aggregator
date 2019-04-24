@@ -1,0 +1,75 @@
+production:
+  spotify:
+    id: ""
+    secret: ""
+    callback: ""
+  soundcloud:
+    id: ""
+    secret: ""
+  facebook:
+    id: ""
+    secret: ""
+  redis:
+    url: "redis://1.1.1.1:6379/"
+  affiliate_id: ""
+  youtube:
+    developer_key: ''
+    youtube_api_service_name: ''
+    youtube_api_version: 'v3'
+    application_name: "yourub"
+    application_version: "0.1"
+    log_level: WARN
+  couchdb:
+    url: "http://1.1.1.1:5984"
+  pg:
+    url: "postgres://feedler:feedler@1.1.1.1:5432/aggregator"
+
+development:
+  spotify:
+    id: ""
+    secret: ""
+    callback: "musicfeed://callback"
+  soundcloud:
+    id: ""
+    secret: ""
+  youtube:
+    developer_key: ''
+    youtube_api_service_name: ''
+    youtube_api_version: ''
+    application_name: ""
+    application_version: "0.1"
+    log_level: WARN
+  facebook:
+    id: ""
+    secret: ""
+  redis:
+    url: "redis://1.1.1.1:6381/"
+  affiliate_id: ""
+  couchdb:
+    url: "http://127.0.0.1:5984"
+  pg:
+    url: "postgres://feedler:feedler@1.1.1.1/aggregator"
+
+test:
+  spotify:
+    id: ""
+    secret: ""
+    callback: "musicfeed://callback"
+  soundcloud:
+    id: ""
+    secret: ""
+  youtube:
+    developer_key: ''
+    youtube_api_service_name: ''
+    youtube_api_version: ''
+    application_name: ""
+    application_version: "0.1"
+    log_level: WARN
+  facebook:
+    id: ""
+    secret: ""
+  redis:
+    url: "redis://127.0.0.1:6381/"
+  affiliate_id: ""
+  couchdb:
+    url: "http://127.0.0.1:5984"

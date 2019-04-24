@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+require "bundler/setup"
+
+require "sidekiq/testing"
+
+require 'aggregator'
+
+require Settings.root_path.join('config', 'boot.rb')
+
+require 'logger'
+LOGGER = Logger.new(STDOUT)
+
+class Testing
+  def self.do
+    Sidekiq::Testing.inline! do
+      Aggregator::Workers::BaseWorker.perform_async(
+        "EAAHHZBahuow0BAJ4caTvNH12Yi1qGWrSrgg3HLtpQ35uZBBcBEcXRiKtFTpRgJpWRu2rGlxhilnl8TR7iBPjGykhSy6V6R6nSJfWY3FXywiWZANoqZA6Y4g0mcDtxZASh0nVkme2QQF3aUpiEWbeZCqbE8TcNWLjLVg8MkhwWLDgZDZD",
+        "1264937113",
+        "me",
+        recent: true
+      )
+    end
+  end
+end
+
+require "pry"
+Pry.start
